@@ -5,10 +5,7 @@ class Solution:
         if len(s) != len(t):
             return False
         else:
-            if s:
-                for letter in sorted(list(s)):
-                    s_dict.update({letter: s_dict.get(letter, 0)+1})
-            if t:
-                for letter in sorted(list(t)):                    
-                    t_dict.update({letter: t_dict.get(letter, 0)+1})
+            for i in range(len(s)):
+                s_dict[s[i]] = s_dict.get(s[i], 0)+1
+                t_dict[t[i]] = t_dict.get(t[i], 0)+1
             return s_dict == t_dict
