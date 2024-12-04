@@ -22,12 +22,12 @@ class Solution:
 
         while r - l > 2:
             if target < nums[m]:
-                r = m
+                r = m - 1
                 m = (l + r) // 2
             elif target == nums[m]:
                 return m
             else: # target > nums[m]
-                l = m
+                l = m + 1
                 m = (l + r) // 2
         if target == nums[r]:
             return r
